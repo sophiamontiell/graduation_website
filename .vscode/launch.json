@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-chrome",
+            "type": "chrome",
             "request": "launch",
             "name": "Open webpage.html",
-            "file": "/Users/sophiemontiel/Downloads/graduation_website/webpage.html"
+            "file": "/Users/sophiemontiel/Downloads/graduation_website/index.html"
         }
     ]
 }
