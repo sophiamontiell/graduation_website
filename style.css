@@ -57,39 +57,92 @@ header {
     /* Position the header at the top of the viewport */
     right: 0;
     /* Position the header on the right side */
-    width: 200px;
+    width: 100%;
+    /* Set the width of the header */
+    z-index: 1;
+    /* Ensure the header appears above other content */
 }
 
-nav ul {
+nav {
+    display: flex;
+    /* Display the elements inside the nav as a flex container */
+    justify-content: flex-end;
+    /* Align items to the right */
+    align-items: center;
+    /* Center the items vertically */
+}
+
+.nav-links {
+    display: flex;
+    /* Display the navigation items horizontally */
     list-style: none;
     /* Remove default list styling */
     margin: 0;
     padding: 0;
 }
 
-nav li {
-    display: block;
-    /* Display the navigation items vertically */
+.nav-links li {
+    margin-left: 20px;
+    /* Add some space between each navigation item */
 }
 
-nav li a {
-    display: block;
-    /* Make the links take up the entire width of the list items */
+.nav-links li a {
     color: #fff;
     /* Text color for the links */
     text-decoration: none;
     /* Remove underline from links */
-    padding: 10px 15px;
-    /* Add padding for spacing inside each link */
 }
 
-/* Style the drop-down menu */
-.dropdown-menu {
+.hamburger-menu {
     display: none;
-    /* Hide the drop-down menu by default */
+    /* Hide the hamburger menu by default on larger screens */
+    cursor: pointer;
+    /* Show pointer cursor when hovering over the hamburger menu */
 }
 
-nav li:hover .dropdown-menu {
-    display: block;
-    /* Show the drop-down menu when hovering over a list item */
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Hide the regular navigation on smaller screens */
+    }
+
+    .hamburger-menu {
+        display: flex;
+        /* Show the hamburger menu on smaller screens */
+        flex-direction: column;
+        /* Stack the bars vertically */
+        justify-content: space-between;
+        /* Space the bars evenly */
+        width: 30px;
+        height: 25px;
+        z-index: 2;
+        /* Ensure the hamburger menu appears above the navigation */
+    }
+
+    /* When the hamburger menu is clicked, show the navigation */
+    .nav-active .nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .nav-active .bar:nth-child(2) {
+        opacity: 0;
+        /* Hide the middle bar when the menu is open */
+    }
+
+    .nav-active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
