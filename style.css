@@ -22,3 +22,10 @@ body {
     text-align: center;
     border-radius: 10px;
 }
+
+h3 {
+    background-color: #EDEADE;
+    /* Replace with your desired background color */
+    padding: 10px;
+    /* Optional: Add some padding around the text */
+}
