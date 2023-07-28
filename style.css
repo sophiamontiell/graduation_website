@@ -21,11 +21,27 @@ body {
     background: ffffff00;
     text-align: center;
     border-radius: 10px;
+
+    font-family: 'YourFontName', cursive;
+    /* Use the font-family you defined in @font-face */
+    font-size: 24px;
+    /* Set the font size as needed */
+    color: #000000;
+    /* Set the text color */
 }
 
 h3 {
-    background-color: #EDEADE;
+    background-color: #F9F6EE;
     /* Replace with your desired background color */
     padding: 10px;
     /* Optional: Add some padding around the text */
+}
+
+@font-face {
+    font-family: 'YourFontName';
+    /* Replace 'YourFontName' with a name for your font */
+    src: url('path/to/your-font.woff2') format('woff2'),
+        /* Replace 'path/to/your-font.woff2' with the actual file path */
+        url('path/to/your-font.woff') format('woff');
+    /* Add other font formats if available */
 }
