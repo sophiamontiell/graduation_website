@@ -45,3 +45,44 @@ h3 {
         url('path/to/your-font.woff') format('woff');
     /* Add other font formats if available */
 }
+
+header {
+    background-color: #333;
+    /* Background color for the nav bar */
+    padding: 10px;
+    /* Optional: Add padding for some spacing around the nav bar */
+}
+
+nav ul {
+    list-style: none;
+    /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: block;
+    /* Display the navigation items vertically */
+}
+
+nav li a {
+    display: block;
+    /* Make the links take up the entire width of the list items */
+    color: #fff;
+    /* Text color for the links */
+    text-decoration: none;
+    /* Remove underline from links */
+    padding: 10px 15px;
+    /* Add padding for spacing inside each link */
+}
+
+/* Style the drop-down menu */
+.dropdown-menu {
+    display: none;
+    /* Hide the drop-down menu by default */
+}
+
+nav li:hover .dropdown-menu {
+    display: block;
+    /* Show the drop-down menu when hovering over a list item */
+}
