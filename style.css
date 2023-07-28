@@ -51,6 +51,13 @@ header {
     /* Background color for the nav bar */
     padding: 10px;
     /* Optional: Add padding for some spacing around the nav bar */
+    position: fixed;
+    /* Fix the header to the viewport */
+    top: 0;
+    /* Position the header at the top of the viewport */
+    right: 0;
+    /* Position the header on the right side */
+    width: 200px;
 }
 
 nav ul {
